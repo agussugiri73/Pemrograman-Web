@@ -1,25 +1,7 @@
 <?php
-// Menghubungkan database dan pilih database
-$conn = mysqli_connect('localhost', 'root', '', 'pweb');
-
-// Query isi tabel pegawai
-$result = mysqli_query($conn, "SELECT * FROM pegawai");
-
-
-// ** ubah data ke dalam array :
-// ** 1. dengan fetch_row
-//       $row = mysqli_fetch_row($result);
-// ** 2. dengan fetch_assoc
-//       $row = mysqli_fetch_assoc($result);
-// ** 3. dengan fetch_array (keduanya)
-//       $row = mysqli_fetch_array($result);
-$rows = [];
-while ($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
-}
-
-// Tampung ke dalam variabel pegawai
-$pegawai = $rows;
+// menghubungkan dengan funntionts file
+require 'functions.php';
+$pegawai = query("SELECT * FROM pegawai");
 ?>
 
 
