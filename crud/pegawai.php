@@ -1,7 +1,8 @@
 <?php
 // menghubungkan dengan funntionts file
 require 'functions.php';
-$pegawai = query("SELECT * FROM pegawai");
+$query = "SELECT * FROM pegawai";
+$pegawai = query($query);
 ?>
 
 
@@ -20,9 +21,9 @@ $pegawai = query("SELECT * FROM pegawai");
     <tr>
       <th>#</th>
       <th>FOTO</th>
-      <th>NIK</th>
+      <!-- <th>NIK</th> -->
       <th>NAMA</th>
-      <th>JABATAN</th>
+      <!-- <th>JABATAN</th> -->
       <TH>AKSI</TH>
     </tr>
 
@@ -32,11 +33,10 @@ $pegawai = query("SELECT * FROM pegawai");
       <tr>
         <td><?= $i++; ?></td>
         <td><img src="img/<?= $p['foto']; ?>" alt="" width="70"></td>
-        <td><?= $p['nik']; ?></td>
         <td><?= $p['nama']; ?></td>
-        <td><?= $p['jabatan']; ?></td>
         <td>
-          <a href="">ubah</a> | <a href="">hapus</a>
+          <!-- <a href="">ubah</a> | <a href="">hapus</a> -->
+          <a href="/../pemrograman-web/crud/detail.php/?id=<?= $p['id']; ?>">Lihat Detail</a>
         </td>
       </tr>
     <?php endforeach; ?>
