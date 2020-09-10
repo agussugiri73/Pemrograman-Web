@@ -17,6 +17,7 @@ $pegawai = query($query);
 
 <body>
   <h3>Daftar Pegawai</h3>
+  <p><a href="/../pemrograman-web/crud/tambah.php">Tambah Data Pegawai</a></p>
   <table border="1" cellpadding="20" cellspacing="0">
     <tr>
       <th>#</th>

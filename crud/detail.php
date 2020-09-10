@@ -24,11 +24,13 @@ $pegawai = query($query);
 
 <body>
   <h3>Detail Pegawai</h3>
+
+
   <ul>
     <li><img src="/../pemrograman-web/crud/img/<?= $pegawai[0]['foto']; ?>" width="250" </li> <li>Nama : <?= $pegawai[0]['nama']; ?></li>
     <li>NIK:<?= $pegawai[0]['nik']; ?></li>
     <li>Jabatan : <?= $pegawai[0]['jabatan']; ?></li>
-    <li><a href="">edit</a>|<a href="">delete</a></li>
+    <li><a href="/../pemrograman-web/crud/edit.php">edit</a>|<a href="/../pemrograman-web/crud/delete.php/?id=<?= $pegawai[0]['id']; ?>">delete</a></li>
     <li><a href="/../pemrograman-web/crud/pegawai.php">Kembali ke Daftar Pegawai..</a></li>
   </ul>
 

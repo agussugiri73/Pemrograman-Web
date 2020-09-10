@@ -30,3 +30,19 @@ function query($query)
   }
   return $rows;
 }
+
+function tambah($data)
+{
+
+  $nama    = $data['nama'];
+  $nik     = $data['nik'];
+  $jabatan = $data['jabatan'];
+  $foto    = $data['foto'];
+
+  $conn  = koneksi();
+  $query = "INSERT INTO `pegawai` (`id`, `nik`, `nama`, `jabatan`, `foto`, `created_at`, `updated_at`) 
+                         VALUES (NULL, '$nik', '$nama', '$jabatan', '$foto', NULL, NULL)";
+  mysqli_query($conn, $query);
+  echo mysqli_error($conn);
+  return mysqli_affected_rows($conn);
+}
